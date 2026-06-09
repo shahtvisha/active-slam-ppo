@@ -1,4 +1,4 @@
-# Active SLAM + PPO — Autonomous City Mapping
+# Active SLAM + PPO - Autonomous City Mapping
 
 An autonomous agent that maps an unknown urban environment from scratch using only local LiDAR observations (no GPS, no prior map)
 
@@ -7,7 +7,7 @@ An autonomous agent that maps an unknown urban environment from scratch using on
 ![Agent run](https://huggingface.co/spaces/TvishaShah/active-slam/resolve/main/assets/run_centre.gif)
 *Left: SLAM belief map built from sensor data alone. Right: ground truth + agent trajectory. Kendall Square, Boston — real OpenStreetMap data.*
 
----
+
 
 ## Results
 
@@ -19,7 +19,7 @@ An autonomous agent that maps an unknown urban environment from scratch using on
 | Map size | 60×60 grid · 10 m/cell |
 | Trained on | Boston, NYC, Chicago, Paris (real OSM) |
 
----
+
 
 ## Architecture
 
@@ -50,7 +50,7 @@ FastMambaPPOTrainer      — PPO with 32-step sequence chunks
 - **Bayesian SLAM** — log-odds occupancy grid with Bresenham LiDAR ray-casting. Sensor updates are probabilistic, so the map degrades gracefully under noisy returns.
 - **Multi-city training** — 50% procedural maps + 50% real OSM city maps (Boston, NYC, Chicago, Paris). Prevents overfitting to a single layout and is what gives the 91% map accuracy on held-out Kendall Square.
 
----
+
 
 ## Project Structure
 
