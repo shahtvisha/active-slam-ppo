@@ -63,4 +63,19 @@ temp/
 *.tmp
 
 # Analysis outputs
-analysis/*.png
+analysis/
+
+# Large binary/data dirs — use Git LFS or keep local only
+checkpoints/
+data/
+evaluation_results/
+
+# Claude / internal tooling
+.claude/
+.bob/
+
+# Weights export
+weights.json
+
+# HF Space assets (large GIFs — live in HF Space repo)
+hf_space/assets/
